@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Cuenta {
@@ -62,6 +64,11 @@ public class Cuenta {
                 '}';
     }
 
+
+
+
+
+    //La opcion numero 4
     // INGRESAR DINERO
     public double ingresarDinero() {
         System.out.println("Digite la cantidad de dinero a ingresar:");
@@ -112,5 +119,7 @@ public class Cuenta {
     public static void fin() {
         System.out.println("Gracias por validar tu cuenta :) ");
     }
+
+
 }
 
