@@ -73,11 +73,29 @@ do{
 
                 break;
             case 4:
+                System.out.println("Digite el número de cuenta a buscar:");
+                int buscar ;
 
-                System.out.println("4. Buscar cuenta");
+                buscar = teclado.nextInt();
+                Cuenta cuentaEncontrada = null;
 
-                menu2();
+                for (Cuenta c : lstLista) {
+                    if (c.getNumero() == buscar) {
+                        cuentaEncontrada = c;
+                        break;
+                    }
+                }
 
+                if (cuentaEncontrada != null) {
+                    System.out.println(" Cuenta encontrada: " + cuentaEncontrada);
+                    menu2(cuentaEncontrada); // mandamos la cuenta encontrada
+                } else {
+                    System.out.println(" No se encontró ninguna cuenta con ese número.");
+                }
+                break;
+
+            case 5:
+                System.out.println(" Saliendo del sistema...");
                 break;
 
             default:
@@ -90,9 +108,9 @@ do{
     }
 
 
-        public static void menu2() {
+        public static void menu2(Cuenta cuenta) {
             Scanner menu2 = new Scanner(System.in);
-            Cuenta cuenta = new Cuenta(12345, 100200300, 50000);
+
 
             int op;
             do {
